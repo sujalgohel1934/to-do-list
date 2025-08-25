@@ -8,16 +8,20 @@ function addTodo() {
   const li = document.createElement("li");
   li.textContent = input.value;
 
-  // ✅ Add the click event listener here
+  // Toggle completed state on click
   li.addEventListener("click", () => {
     li.classList.toggle("completed");
   });
 
+  // ✅ Add delete button
+  const delBtn = document.createElement("button");
+  delBtn.textContent = "❌";
+  delBtn.onclick = (e) => {
+    e.stopPropagation(); // prevent triggering li click event
+    li.remove();
+  };
+
+  li.appendChild(delBtn);
   list.appendChild(li);
   input.value = "";
 }
-const delBtn = document.createElement("button");
-delBtn.textContent = "❌";
-delBtn.onclick = () => li.remove();
-li.appendChild(delBtn);
-

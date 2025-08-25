@@ -3,3 +3,25 @@
   text-decoration: line-through;
   color: gray;
 }
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+#todo-list li {
+  background: #fff;
+  padding: 10px;
+  margin: 5px;
+  list-style: none;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+}
+button {
+  margin-left: 10px;
+  cursor: pointer;
+}
