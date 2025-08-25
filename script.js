@@ -7,7 +7,12 @@ function addTodo() {
 
   const li = document.createElement("li");
   li.textContent = input.value;
-  list.appendChild(li);
 
+  // ✅ Add the click event listener here
+  li.addEventListener("click", () => {
+    li.classList.toggle("completed");
+  });
+
+  list.appendChild(li);
   input.value = "";
 }
