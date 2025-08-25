@@ -16,3 +16,8 @@ function addTodo() {
   list.appendChild(li);
   input.value = "";
 }
+const delBtn = document.createElement("button");
+delBtn.textContent = "❌";
+delBtn.onclick = () => li.remove();
+li.appendChild(delBtn);
+
